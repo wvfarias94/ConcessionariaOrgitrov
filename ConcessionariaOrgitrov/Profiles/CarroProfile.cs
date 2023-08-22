@@ -2,14 +2,14 @@
 using ConcessionariaOrgitrov.Data.Dto.CarroDtos;
 using ConcessionariaOrgitrov.Models;
 
-namespace ConcessionariaOrgitrov.Profiles
+namespace ConcessionariaOrgitrov.Profiles;
+
+public class CarroProfile : Profile
 {
-    public class CarroProfile : Profile
+    public CarroProfile()
     {
-        public CarroProfile()
-        {
-            CreateMap<CreateCarroDto, Carro>();
-            CreateMap<Carro, ReadCarroDto>();
-        }
+        CreateMap<CreateCarroDto, Carro>();
+        CreateMap<Carro, ReadCarroDto>();
+        CreateMap<UpdateCarroDto, Carro>();
     }
 }
